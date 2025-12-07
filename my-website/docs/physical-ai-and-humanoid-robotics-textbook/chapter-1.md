@@ -1,0 +1,16 @@
+---
+sidebar_position: 1
+---
+
+# Chapter 1: Foundations of Physical AI
+
+- Lesson 1.1: History and Evolution of Robotics and AI
+  The journey of robotics and artificial intelligence spans centuries, beginning with ancient automata and conceptual machines. The mid-20th century marked significant advancements with the advent of electronic computers and early AI research. Key milestones include the development of industrial robots in the 1960s, the rise of expert systems in the 1980s, and the recent explosion of machine learning and deep learning techniques. This lesson explores these pivotal moments, tracing how theoretical concepts evolved into practical applications and laying the groundwork for modern physical AI.
+- Lesson 1.2: Core Concepts of Embodied Intelligence
+  Embodied intelligence refers to the idea that an agent's intelligence is deeply intertwined with its physical body and its interactions with the environment. Unlike disembodied AI (like a chess program), physical AI systems experience the world through sensors and act upon it through effectors. This lesson delves into the core tenets of embodied cognition, exploring how morphology, sensorimotor skills, and environmental feedback collectively shape a robot's perception, learning, and decision-making processes. Understanding these concepts is fundamental to designing truly adaptive and autonomous physical AI systems.
+- Lesson 1.3: Sensors and Perception in Physical Systems
+  Sensors are the eyes, ears, and touch of a physical AI system, enabling it to gather information from its surroundings. This lesson covers various types of sensors, including cameras (computer vision), LiDAR (distance and mapping), ultrasonic sensors, force/torque sensors, and tactile sensors. We will explore the principles behind how these sensors work, their respective advantages and limitations, and how the raw data they collect is processed and integrated to form a coherent perception of the environment, crucial for navigation, object recognition, and interaction.
+- Lesson 1.4: Actuators and Manipulation
+  Actuators are the components that allow physical AI systems to move and interact with the physical world. This lesson focuses on the diverse range of actuators, such as electric motors, hydraulic and pneumatic systems, and their underlying principles. We will discuss how these devices translate digital commands into physical motion, enabling robots to perform tasks like locomotion, grasping, and fine manipulation. Key topics include degrees of freedom, kinematic chains, and the challenges of achieving precise and compliant interaction with objects in complex environments.
+- Lesson 1.5: Introduction to Control Theory
+  Control theory provides the mathematical framework for designing systems that can regulate their own behavior. For physical AI, it is indispensable for ensuring stable and precise movements. This lesson introduces fundamental concepts such as open-loop and closed-loop control, feedback mechanisms, and common control strategies like PID (Proportional-Integral-Derivative) control. We will explore how these principles are applied to robotic systems to achieve desired trajectories, maintain balance, and respond effectively to disturbances, forming the bedrock of dynamic and autonomous physical interaction.

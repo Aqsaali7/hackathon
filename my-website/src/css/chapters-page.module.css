@@ -1,0 +1,74 @@
+/* src/css/chapters-page.module.css */
+
+.pageHeader {
+  background: linear-gradient(135deg, #001f4d, #003366); /* Dark blue gradient */
+  padding: 3rem 0;
+  text-align: center;
+  color: white;
+  border-bottom: 1px solid rgba(var(--ifm-color-primary-light), 0.2); /* Blue border */
+}
+
+.pageHeader h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: white;
+}
+
+.mainContent {
+  padding: 3rem 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.chapterList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.chapterBlock {
+  background-color: rgba(0, 31, 77, 0.4); /* Dark blue background */
+  border: 1px solid #0050B3; /* Blue border */
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.chapterBlock:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(var(--ifm-color-primary-light), 0.3); /* Blue hover shadow */
+}
+
+.chapterBlock h2 {
+  font-size: 1.8rem;
+  color: #7BB8FF; /* Lighter blue for chapter titles */
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(var(--ifm-color-primary-light), 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.lessonList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lessonItem {
+  margin-bottom: 0.5rem;
+}
+
+.lessonLink {
+  display: block;
+  background-color: rgba(0, 40, 100, 0.3); /* Darker blue background */
+  color: #E0E0E0;
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.lessonLink:hover {
+  background-color: rgba(0, 60, 150, 0.5); /* Lighter blue on hover */
+  color: white;
+}

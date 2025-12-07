@@ -1,0 +1,149 @@
+/* src/css/landing-page.module.css */
+
+.heroBanner {
+  background: linear-gradient(135deg, #001f4d, #003366); /* Dark blue gradient */
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.bookTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 8px rgba(123, 184, 255, 0.6); /* Subtle blue glow */
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.heroImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  filter: blur(2px);
+  z-index: 0;
+}
+
+.mainContent {
+  padding: 3rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.chaptersSection h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #7BB8FF; /* Lighter blue for section title */
+  text-shadow: 0 0 8px rgba(123, 184, 255, 0.4); /* Subtle blue glow */
+}
+
+.chapterGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.chapterCard {
+  background-color: rgba(0, 31, 77, 0.6); /* Dark blue background */
+  border: 1px solid #0050B3; /* Blue border */
+  border-radius: 8px;
+  padding: 1.2rem 1.8rem;
+  box-shadow: none;
+  transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.chapterCard:hover {
+  transform: translateY(-3px);
+  border-color: #7BB8FF; /* Lighter blue accent on hover */
+  background-color: rgba(0, 40, 100, 0.7); /* Slightly lighter blue on hover */
+  box-shadow: 0 4px 15px rgba(123, 184, 255, 0.2);
+}
+
+.chapterCard h3 {
+  color: #A1D0FF; /* Lighter blue for chapter titles */
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.lessonList {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: center;
+}
+
+.lessonItem {
+  margin-bottom: 0;
+}
+
+.lessonLink {
+  display: block;
+  background-color: rgba(0, 40, 100, 0.4); /* Darker blue background */
+  color: #E0E0E0;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  white-space: normal;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.lessonLink:hover {
+  background-color: rgba(0, 60, 150, 0.6); /* Lighter blue on hover */
+  color: white;
+  border-color: #E0E0E0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .heroBanner {
+    padding: 3rem 0;
+  }
+  .bookTitle {
+    font-size: 2.5rem;
+  }
+  .heroSubtitle {
+    font-size: 1.2rem;
+  }
+  .chaptersSection h2 {
+    font-size: 2rem;
+  }
+  .chapterCard h3 {
+    font-size: 1.5rem;
+  }
+  .chapterGrid {
+    grid-template-columns: 1fr;
+  }
+}
