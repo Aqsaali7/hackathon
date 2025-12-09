@@ -6,240 +6,175 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #004d99; /* Deep dark blue */
-  --ifm-color-primary-dark: #004285;
-  --ifm-color-primary-darker: #003c7a;
-  --ifm-color-primary-darkest: #003061;
-  --ifm-color-primary-light: #0060c2;
-  --ifm-color-primary-lighter: #0069d6;
-  --ifm-color-primary-lightest: #0078eb;
+  --ifm-color-primary: #2c3e50; /* Navy Blue */
+  --ifm-color-primary-dark: #1a252f;
+  --ifm-color-primary-darker: #151e26;
+  --ifm-color-primary-darkest: #0d1318;
+  --ifm-color-primary-light: #3f566b;
+  --ifm-color-primary-lighter: #466079;
+  --ifm-color-primary-lightest: #587895;
 
-  --ifm-color-secondary: #5C6BC0; /* A more muted, blue-leaning purple */
-  --ifm-color-secondary-dark: #4F5BAA;
-  --ifm-color-secondary-darker: #46539C;
-  --ifm-color-secondary-darkest: #38437D;
-  --ifm-color-secondary-light: #6E7DD8;
-  --ifm-color-secondary-lighter: #7B8AEB;
-  --ifm-color-secondary-lightest: #8FA0FF;
+  --ifm-color-secondary: #7f8c8d; /* Grey */
+  --ifm-color-secondary-dark: #6c7a7b;
+  --ifm-color-secondary-darker: #627071;
+  --ifm-color-secondary-darkest: #4f5b5c;
+  --ifm-color-secondary-light: #929f9f;
+  --ifm-color-secondary-lighter: #9ba7a8;
+  --ifm-color-secondary-lightest: #b0b9b9;
+
+  --ifm-background-color: #ecf0f1; /* Light Grey Background */
+  --ifm-color-content: #34495e; /* Dark Blue-Grey Text */
+  --ifm-heading-color: var(--ifm-color-primary);
 
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-
-  /* Custom sci-fi theme variables - adjusted for dominant dark blue look */
-  --ifm-background-color: #0d1a2d; /* Dark blue background */
-  --ifm-color-content: #e0e0e0; /* Light text for readability */
-  --ifm-color-content-secondary: #aaaaaa;
-  --ifm-font-family-base: 'Roboto Mono', monospace; /* Tech-inspired font */
-  --ifm-heading-color: var(--ifm-color-primary-light);
-  --ifm-link-color: var(--ifm-color-secondary-light);
-  --ifm-link-hover-color: var(--ifm-color-secondary-lighter);
-  --ifm-card-border-color: rgba(var(--ifm-color-secondary-dark), 0.3); /* Subtle card border */
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #0060c2;
-  --ifm-color-primary-dark: #004d99;
-  --ifm-color-primary-darker: #004285;
-  --ifm-color-primary-darkest: #003061;
-  --ifm-color-primary-light: #0078eb;
-  --ifm-color-primary-lighter: #0088ff;
-  --ifm-color-primary-lightest: #0099ff;
+  --ifm-color-primary: #3498db; /* Brighter Blue for Dark Mode */
+  --ifm-color-primary-dark: #2980b9;
+  --ifm-color-primary-darker: #2471a3;
+  --ifm-color-primary-darkest: #1f618d;
+  --ifm-color-primary-light: #5dade2;
+  --ifm-color-primary-lighter: #73c5eb;
+  --ifm-color-primary-lightest: #85cdee;
 
-  --ifm-color-secondary: #7B8AEB;
-  --ifm-color-secondary-dark: #6E7DD8;
-  --ifm-color-secondary-darker: #606CC7;
-  --ifm-color-secondary-darkest: #4F5BAA;
-  --ifm-color-secondary-light: #8FA0FF;
-  --ifm-color-secondary-lighter: #A0B0FF;
-  --ifm-color-secondary-lightest: #B2C2FF;
-  
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-secondary: #95a5a6; /* Lighter Grey for Dark Mode */
 
-  --ifm-background-color: #0d1a2d; /* Ensure dark blue background for dark mode too */
-  --ifm-color-content: #e0e0e0;
-  --ifm-color-content-secondary: #aaaaaa;
+  --ifm-background-color: #2c3e50; /* Navy Blue Background */
+  --ifm-color-content: #ecf0f1; /* Light Grey Text */
   --ifm-heading-color: var(--ifm-color-primary-light);
-  --ifm-link-color: var(--ifm-color-secondary-light);
-  --ifm-link-hover-color: var(--ifm-color-secondary-lighter);
-  --ifm-card-border-color: rgba(var(--ifm-color-secondary-dark), 0.3);
+  --ifm-link-color: var(--ifm-color-primary-light);
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-/* Global styles for modern, clean, and futuristic aesthetic */
 body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+}
+
+/* Modern, clean, digital-book aesthetic */
+.navbar {
   background-color: var(--ifm-background-color);
-  font-family: var(--ifm-font-family-base);
-  color: var(--ifm-color-content);
+  box-shadow: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1rem 2rem;
+}
+
+[data-theme='dark'] .navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .main-wrapper {
-  background-color: var(--ifm-background-color); /* Ensure main content area matches body */
+  background-color: var(--ifm-background-color);
 }
 
-/* Headers - clear section titles, flat look */
-h1, h2, h3, h4, h5, h6 {
-  color: var(--ifm-heading-color);
-  text-shadow: none; /* Removed glowing accent */
-  margin-top: 1.5rem;
-  margin-bottom: 0.7rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 1px solid rgba(var(--ifm-color-primary-light), 0.1); /* Blue-dominant border */
+/* Wide, low-height boxes for content */
+.markdown > * {
+  background-color: #ffffff;
+  border: 1px solid #dfe6e9;
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: none;
+  overflow: auto;
+  overflow-wrap: break-word;
 }
 
-h1 { font-size: 2.3rem; }
-h2 { font-size: 1.8rem; }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.2rem; }
-
-/* Readability and Spacing */
-p {
-  line-height: 1.5;
-  margin-bottom: 0.7rem;
+[data-theme='dark'] .markdown > * {
+  background-color: #34495e; /* Darker navy-blue for content boxes */
+  border-color: #4a637b;
 }
 
-ul, ol {
-  margin-bottom: 0.7rem;
-  padding-left: 1.2rem;
+/* Remove box styling from titles */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  background-color: transparent;
+  border: none;
+  padding: 0;
 }
 
-li {
-  margin-bottom: 0.3rem;
-}
-
-a {
-  color: var(--ifm-link-color);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-a:hover {
-  color: var(--ifm-link-hover-color);
-  text-decoration: underline;
-}
-
-/* Content Blocks/Cards - Simplified for generic Markdown elements */
-.markdown p,
+/* Ensure lesson content stays inside boxes */
 .markdown ul,
-.markdown ol,
-.markdown blockquote,
-.markdown table {
-  background-color: rgba(0, 40, 80, 0.05); /* Subtle dark blue background */
-  border: 1px solid var(--ifm-card-border-color);
-  border-radius: 5px;
-  padding: 0.8rem 1rem;
-  margin-bottom: 0.8rem;
-  box-shadow: none;
-  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  height: auto;
+.markdown ol {
+  padding-left: 2rem;
 }
 
-.markdown p:hover,
-.markdown ul:hover,
-.markdown ol:hover,
-.markdown blockquote:hover,
-.markdown table:hover {
-  background-color: rgba(0, 50, 100, 0.1); /* Subtle background change on hover */
-  border-color: var(--ifm-color-primary-light); /* Primary blue accent on hover */
+.markdown p,
+.markdown li {
+  line-height: 1.7;
 }
 
-/* Special styling for blockquotes */
-.markdown blockquote {
-  border-left: 2px solid var(--ifm-color-primary-light); /* Blue quote border */
-  color: var(--ifm-color-content-secondary);
-  font-style: normal;
-  padding-left: 0.8rem;
+.footer {
+  background-color: var(--ifm-background-color);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* Code blocks */
-.theme-code-block {
-  border-radius: 5px;
-  box-shadow: none;
-  background-color: #0d2640; /* Darker blue background for code */
-  border: 1px solid rgba(var(--ifm-color-primary-dark), 0.1);
+[data-theme='dark'] .footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Navbar adjustments for a cleaner look */
-.navbar {
-  background-color: rgba(0, 20, 40, 0.6); /* Darker blue transparent background */
-  border-bottom: 1px solid rgba(var(--ifm-color-primary-dark), 0.05);
-  box-shadow: none;
-  padding: 0.5rem 1.5rem;
+/* Card-style Navbar */
+.navbar__inner {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 1200px;
 }
 
-.navbar__brand {
-  font-size: 1.2rem;
-  font-weight: 500;
-  padding-right: 1.5rem;
-  text-shadow: none;
-}
-
-.navbar__brand:hover {
-  color: var(--ifm-color-primary-light);
-  text-decoration: none;
-}
-
-.navbar__logo {
-  margin-right: 0.5rem;
+.navbar__items {
+  display: flex;
+  gap: 1rem;
 }
 
 .navbar__item {
-  font-size: 0.95rem;
-  padding: 0.5rem 0.8rem;
-  border-radius: 4px;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.navbar__item:hover {
-  background-color: rgba(var(--ifm-color-primary-dark), 0.1); /* Subtle blue background on hover */
-  color: var(--ifm-color-primary-light);
-  text-decoration: none;
-}
-
-/* Active navbar item styling */
-.navbar__item.navbar__link--active {
-  background-color: rgba(var(--ifm-color-primary-dark), 0.2);
-  color: var(--ifm-color-primary-light);
-  font-weight: 600;
-}
-
-/* Flexbox styling for lessons within chapters (retained and adjusted) */
-.docs-wrapper .main-wrapper ul {
   display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding-left: 0;
-  margin-left: -0.4rem;
-  margin-right: -0.4rem;
+  align-items: center;
 }
 
-.docs-wrapper .main-wrapper ul li {
-  flex: 1 1 100%;
-  margin: 0.4rem 0;
-  padding: 0.6rem 1rem;
-  border: 1px solid var(--ifm-card-border-color);
-  border-radius: 5px;
-  background-color: rgba(0, 40, 80, 0.05); /* Subtle dark blue background */
-  box-shadow: none;
-  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.2s ease-in-out;
-  min-height: unset;
-  height: auto;
+.navbar__link {
+  background-color: white;
+  border-radius: 2rem;
+  padding: 0.5rem 1.5rem;
+  color: var(--ifm-color-primary);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.docs-wrapper .main-wrapper ul li:hover {
-  transform: translateY(-1px);
-  background-color: rgba(0, 50, 100, 0.1); /* Subtle blue background change on hover */
-  border-color: var(--ifm-color-primary-light); /* Primary blue accent on hover */
+.navbar__link:hover {
+  text-decoration: none;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
 }
 
-/* Adjustments for smaller screens */
-@media screen and (max-width: 996px) {
-  .docs-wrapper .main-wrapper ul li {
-    flex: 1 1 100%;
-  }
+.navbar__link--active {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-@media screen and (max-width: 768px) {
-  .docs-wrapper .main-wrapper ul li {
-    flex: 1 1 100%;
-  }
+[data-theme="dark"] .navbar__link {
+  background-color: var(--ifm-color-primary-darkest);
+  color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+[data-theme="dark"] .navbar__link:hover {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .navbar__link--active {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
